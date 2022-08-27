@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="frontend/css/owl.carousel.min.css">
+<link rel="stylesheet" href="frontend/css/magnific-popup.css">
+<link rel="stylesheet" href="frontend/css/font-awesome.min.css">
+<link rel="stylesheet" href="frontend/css/themify-icons.css">
+<link rel="stylesheet" href="frontend/css/nice-select.css">
+<link rel="stylesheet" href="frontend/css/flaticon.css">
+<link rel="stylesheet" href="frontend/css/gijgo.css">
+<link rel="stylesheet" href="frontend/css/animate.min.css">
+<link rel="stylesheet" href="frontend/css/slicknav.css">
+<link rel="stylesheet" href="frontend/css/style.css">
