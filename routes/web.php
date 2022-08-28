@@ -46,3 +46,5 @@ Route::resource('applicant', 'ApplicantController');
 Route::get('/admin', function () {
     return view('auth.login');
 });
+
+//Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
