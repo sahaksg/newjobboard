@@ -42,8 +42,15 @@
     <!-- summernote -->
     <link rel="stylesheet" href="{{asset('frontend/css/summernote-bs4.min.css')}}">
 </head>
-<body class="hold-transition sidebar-mini">
+<body S>
+@if(!Auth::user())
 
+<script>
+    location.replace('{{ route('login') }}');
+</script>
+
+
+@else
 <div class="wrapper">
     @include('layouts.inc.admin-navbar')
     @include('layouts.inc.admin-sidebar')
@@ -64,7 +71,7 @@
 
     @include('layouts.inc.admin-footer')
 </div>
-
+@endif
 
 
 <!-- jQuery -->

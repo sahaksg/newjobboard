@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/all.min.css')}}">
     <!-- icheck bootstrap -->
     <link rel="stylesheet" href="{{asset('frontend/css/icheck-bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('frontend/css/adminlte.min.css')}}">
 </head>
@@ -22,10 +22,10 @@
 <!-- /.login-box -->
 
 <!-- jQuery -->
-<script src="{{asset('frontend/css/jquery.min.js')}}"></script>
+<script src="{{asset('frontend/js/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
-<script src="{{asset('frontend/css/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('frontend/js/bootstrap.bundle.min.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="{{asset('frontend/css/adminlte.min.js')}}"></script>
+<script src="{{asset('frontend/js/adminlte.js')}}"></script>
 </body>
 </html>
