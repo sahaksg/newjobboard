@@ -16,6 +16,8 @@
                                     <th>Location</th>
                                     <th>Dead line</th>
                                     <th>Salary</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
 
                                 </tr>
                                 </thead>
@@ -28,6 +30,8 @@
                     <td>{{$job->location}}</td>
                     <td>{{$job->deadline}}</td>
                     <td>{{$job->salary}}</td>
+                    <td><a href="{{url('admin/jobs/edit/'.$job->id)}}" class="btn btn-info">Edit</a></td>
+                     <td><a href="{{url('admin/jobs/delete/'.$job->id)}}" class="btn btn-danger">Delete</a></td>
                   </tr>
 @endforeach
 

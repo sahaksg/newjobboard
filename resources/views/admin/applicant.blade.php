@@ -27,7 +27,7 @@
                                     <td>{{$applicant->email}}</td>
                                     <td>{{$applicant->description}}</td>
                                     <td>{{$applicant->created_at}}</td>
-                                    <td><a href='#'>{{$applicant->resume}}</a></td>
+                                    <td><a href='{{asset('storage/cv/'.$applicant->resume)}}'>{{$applicant->resume}}</a></td>
                                 </tr>
                                 @endforeach
                                 </tbody>

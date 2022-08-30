@@ -12,4 +12,28 @@ class JobController extends Controller
         $jobs=Job::all();
         return view('admin.job', compact('jobs','jobs'));
     }
+    public function create()
+    {
+        return "create new job";
+    }
+    public function edit($id)
+    {
+        return "edit job with id -".$id;
+    }
+    public function update(Request $request, $id)
+    {
+        //
+    }
+    public function destroy($id)
+    {
+        return "delete job with id -".$id;
+    }
+    public function show($id)
+    {
+        //
+    }
+    public function store(Request $request)
+    {
+
+    }
 }

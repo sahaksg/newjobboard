@@ -77,17 +77,12 @@
                     <ul class="nav nav-treeview">
 
                         <li class="nav-item">
-                            <a href="job-add.php" class="nav-link">
+                            <a href="{{url('admin/jobs/create')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Job Add</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="job-edit.php" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Job Edit/Delete</p>
-                            </a>
-                        </li>
+
 
                     </ul>
                 </li>
