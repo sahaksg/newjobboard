@@ -84,7 +84,11 @@ class JobController extends Controller
 
     public function destroy($id)
     {
-        return "delete job with id -" . $id;
+//        dd($id);
+        $job=Job::find($id);
+        $job->delete();
+        return redirect()->back();
+
     }
 
     public function show($id)
