@@ -40,6 +40,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/dashboard',[\App\Http\Controllers\Admin\DashboardController::class,'index']);
     Route::get('/jobs',[\App\Http\Controllers\Admin\JobController::class,'index']);
     Route::get('/jobs/create',[\App\Http\Controllers\Admin\JobController::class,'create']);
+    Route::post('/jobs/store',[\App\Http\Controllers\Admin\JobController::class,'store']);
     Route::get('/jobs/edit/{id}',[\App\Http\Controllers\Admin\JobController::class,'edit']);
     Route::get('/jobs/delete/{id}',[\App\Http\Controllers\Admin\JobController::class,'destroy']);
     Route::get('/applicants',[\App\Http\Controllers\Admin\ApplicantController::class,'index']);

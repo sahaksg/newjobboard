@@ -14,7 +14,40 @@ class JobController extends Controller
     }
     public function create()
     {
-        return "create new job";
+        return view('admin.job_create');
+    }
+    public function store(Request $request)
+    {
+//        dd($request);
+        $this->validate($request, [
+            'title' => 'bail|required',
+            'information' => 'required',
+            'employment' => 'required',
+            'responce' => 'required',
+            'qualif' => 'required',
+            'benef' => 'required',
+            'salary' => 'nullable',
+            'currency' => 'nullable',
+            'location' => 'required',
+            'status' => 'required',
+
+        ]);
+        $job=new Job;
+        $job->title=$request->input('title');
+        $job->employment=$request->input('employment');
+        $job->location=$request->input('location');
+        $job->deadline=$request->input('deadline');
+        $job->information=$request->input('information');
+        $job->responce=$request->input('responce');
+        $job->qualif=$request->input('qualif');
+        $job->benef=$request->input('benef');
+        $job->salary=$request->input('salary');
+        $job->company=$request->input('company');
+        $job->currency=$request->input('currency');
+        $job->status=$request->input('status');
+        $job->save();
+
+        return redirect()->back()->with('status', 'New job was created successfully!');
     }
     public function edit($id)
     {
@@ -32,8 +65,5 @@ class JobController extends Controller
     {
         //
     }
-    public function store(Request $request)
-    {
 
-    }
 }

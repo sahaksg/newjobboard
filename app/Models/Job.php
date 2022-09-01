@@ -19,6 +19,7 @@ class Job extends Model
         'qualif',
         'benef',
         'salary',
-        'company'
+        'company',
+        'status',
     ];
 }

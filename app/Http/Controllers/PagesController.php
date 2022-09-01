@@ -11,17 +11,20 @@ class PagesController extends Controller
 //    home page text
     public function index(){
         $result=Home::all();
+
         return view('pages.index',compact('result'));
     }
 //    jobs page to display all jobs
     public function jobs($pag){
+
         $page=$pag;
         $kol=3;
         $art=($page*$kol)-$kol;
-        $sql1=Job::all()->skip($art)->take($kol);
-        $sql2=Job::all()->count();
+
+        $sql1=Job::all()->where('status','=','active')->skip($art)->take($kol);
+        $sql2=Job::all()->where('status','=','active')->count();
         $str_pag=ceil($sql2/$kol);
-//        dd($str_pag);
+//        dd($sql1);
 
         return view('pages.jobs', compact('sql1','str_pag'));
     }
