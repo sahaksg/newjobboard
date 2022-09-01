@@ -5,13 +5,16 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class JobController extends Controller
 {
     public function index()
     {
         $jobs = Job::all();
-        return view('admin.job', compact('jobs', 'jobs'));
+        return view('admin.job', [
+            'jobs' => DB::table('jobs')->paginate(4)
+        ]);
     }
 
     public function create()

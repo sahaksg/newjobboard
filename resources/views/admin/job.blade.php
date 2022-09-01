@@ -8,7 +8,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <table class="table table-bordered table-hover">
+                            <table class="table table-bordered table-hover table-dark">
                                 <thead>
                                 <tr>
                                     <th>Title</th>
@@ -49,6 +49,7 @@
                                 </tr>
                                 </tfoot>
                             </table>
+                            {{ $jobs->links() }}
                         </div>
 
                     </div>
@@ -63,5 +64,7 @@
         </div>
 
     </section>
+
+
 
 @endsection

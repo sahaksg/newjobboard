@@ -42,6 +42,7 @@
                                 </tr>
                                 </tfoot>
                             </table>
+                            {{ $applicants->links() }}
 
                         </div>
                     </div>
