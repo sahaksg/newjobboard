@@ -42,6 +42,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/jobs/create',[\App\Http\Controllers\Admin\JobController::class,'create']);
     Route::post('/jobs/store',[\App\Http\Controllers\Admin\JobController::class,'store']);
     Route::get('/jobs/edit/{id}',[\App\Http\Controllers\Admin\JobController::class,'edit']);
+    Route::put('/jobs/update/{id}',[\App\Http\Controllers\Admin\JobController::class,'update']);
     Route::get('/jobs/delete/{id}',[\App\Http\Controllers\Admin\JobController::class,'destroy']);
     Route::get('/applicants',[\App\Http\Controllers\Admin\ApplicantController::class,'index']);
 

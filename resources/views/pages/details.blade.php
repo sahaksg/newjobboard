@@ -2,7 +2,7 @@
 @section('content')
 
 
-
+{{--{{dd($result->currency)}}--}}
 
     <div class="bradcam_area bradcam_bg_1">
         <div class="container">
@@ -135,7 +135,7 @@
                         <div class="job_content">
                             <ul>
                                 <li>Published on: <span>{{$result->created_at}}</span></li>
-                                <li>Salary: <span>{{$result->salary}}</span></li>
+                                <li>Salary: <span>{{$result->salary}} {{($result->currency)=='eur' ? '€' : (($result->currency)=='usd' ? '$' : 'N/A')}}</span> </li>
                                 <li>Location: <span>{{$result->location}}</span></li>
                                 <li>Job Nature: <span>{{$result->employment}} </span></li>
                             </ul>

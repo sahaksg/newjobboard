@@ -20,7 +20,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($applicants as $applicant){
+                                @foreach($applicants as $applicant)
                                 <tr>
                                     <td>{{$applicant->job_title}}</td>
                                     <td>{{$applicant->name}}</td>
