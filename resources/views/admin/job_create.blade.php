@@ -68,7 +68,7 @@
                     <!-- /.card -->
                 </div>
                 <div class="col-md-6">
-                    <div class="card card-secondary">
+                    <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Other</h3>
 
@@ -81,12 +81,14 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="inputEstimatedBudget">Estimated budget</label>
-                                <input type="text" id="inputEstimatedBudget"  name="salary">
+                                <div class="d-flex">
+                                <input class="form-control" style="width: 10rem" type="text" id="inputEstimatedBudget"  name="salary">
                                 <select name="currency" >
                                     <option value="na">N/A</option>
                                     <option value="eur">&#8364</option>
                                     <option value="usd">&#x24</option>
                                 </select>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputSpentBudget">Location</label>

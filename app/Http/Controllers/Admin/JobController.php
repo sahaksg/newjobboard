@@ -98,5 +98,15 @@ class JobController extends Controller
     {
         //
     }
+    public function search(Request $request)
+    {
+        $title=$request->title;
+//        dd($title);
+
+        $jobs = Job::query()->where('title', 'LIKE', '%'.$title.'%')->get();
+//        dd($jobs);
+
+        return view('admin.search', compact('jobs','jobs'));
+    }
 
 }

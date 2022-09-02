@@ -77,7 +77,7 @@
                     <!-- /.card -->
                 </div>
                 <div class="col-md-6">
-                    <div class="card card-secondary">
+                    <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Other</h3>
 
@@ -88,14 +88,17 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="form-group">
+                            <div class="form-group ">
                                 <label for="inputEstimatedBudget">Estimated budget</label>
-                                <input type="text" id="inputEstimatedBudget" name="salary" value="{{$job->salary}}">
-                                <select name="currency">
-                                    <option {{($job->currency)==''?'selected': ''}} value="na">N/A</option>
-                                    <option {{($job->currency)=='eur'?'selected': ''}} value="eur">€</option>
-                                    <option {{($job->currency)=='usd'?'selected': ''}} value="usd">$</option>
-                                </select>
+                                <div class="d-flex">
+                                    <input style="width: 10rem" class="form-control" type="text" id="inputEstimatedBudget" name="salary" value="{{$job->salary}}">
+                                    <select name="currency">
+                                        <option {{($job->currency)==''?'selected': ''}} value="na">N/A</option>
+                                        <option {{($job->currency)=='eur'?'selected': ''}} value="eur">€</option>
+                                        <option {{($job->currency)=='usd'?'selected': ''}} value="usd">$</option>
+                                    </select>
+                                </div>
+
                             </div>
                             <div class="form-group">
                                 <label for="inputSpentBudget">Location</label>
