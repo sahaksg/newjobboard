@@ -23,7 +23,7 @@
 
 
                                 </tr>
-                                </thead>
+{{--                                </thead>--}}
                                 <tbody>
 
 @foreach($jobs as $job)

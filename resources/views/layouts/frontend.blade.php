@@ -32,6 +32,13 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/slicknav.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+
+    <style>
+        a{
+            text-decoration: none;
+        }
+
+    </style>
 </head>
 <body class="antialiased">
 @include('layouts.inc.header')

@@ -27,11 +27,11 @@ class JobController extends Controller
 //        dd($request);
         $this->validate($request, [
             'title' => 'bail|required',
-            'information' => 'required',
+            'information' => 'sometimes|nullable',
             'employment' => 'required',
-            'responce' => 'required',
-            'qualif' => 'required',
-            'benef' => 'required',
+            'responce' => 'sometimes|nullable',
+            'qualif' => 'sometimes|nullable',
+            'benef' => 'sometimes|nullable',
             'salary' => 'nullable',
             'currency' => 'nullable',
             'location' => 'required',

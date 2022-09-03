@@ -55,23 +55,37 @@
                     <div class="descript_wrap white-bg">
                         <div class="single_wrap">
                             <h4>Job description</h4>
-                            <p>{{$result->information}} </p>
+                            <p>{!! html_entity_decode($result->information) !!} </p>
+
+
 
                         </div>
                         <div class="single_wrap">
                             <h4>Responsibility</h4>
-                            <p>{{$result->responce}} </p>
+                            @foreach($text_resp as $line)
+                                <p>{!! html_entity_decode($line) !!}</p>
+                            @endforeach
+
 
                         </div>
                         <div class="single_wrap">
                             <h4>Qualifications</h4>
-                            <p> {{$result->qualif}}</p>
+
+                                @foreach($text_qualif as $line)
+                                    <p>{!! html_entity_decode($line) !!}</p>
+                                @endforeach
+
                         </div>
                         <div class="single_wrap">
                             <h4>Benefits</h4>
-                            <p> {{$result->benef}}</p>
+
+                            @foreach($text_benef as $line)
+                                <p>{!! html_entity_decode($line) !!}</p>
+                            @endforeach
+
                         </div>
                     </div>
+
 
 
                     <div class="apply_job_form white-bg">

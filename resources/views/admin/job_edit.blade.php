@@ -61,7 +61,7 @@
                                 <div class="form-group">
                                     <label for="inputDescription">Qualification</label>
                                     <textarea id="inputDescription" class="form-control" rows="4"
-                                              name="qualif">{{$job->information}}</textarea>
+                                              name="qualif">{{$job->qualif}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputDescription">Benefisity</label>
