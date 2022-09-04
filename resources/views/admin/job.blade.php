@@ -54,13 +54,7 @@
 
                                 </tbody>
                                 <tfoot>
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Employment type</th>
-                                    <th>Location</th>
-                                    <th>Dead line</th>
-                                    <th>Salary</th>
-                                </tr>
+
                                 </tfoot>
                             </table>
                             {{ $jobs->links() }}

@@ -32,14 +32,7 @@
                                 @endforeach
                                 </tbody>
                                 <tfoot>
-                                <tr>
-                                    <th>Position</th>
-                                    <th>Name</th>
-                                    <th>E-mail</th>
-                                    <th>Message</th>
-                                    <th>Date</th>
-                                    <th>CV</th>
-                                </tr>
+
                                 </tfoot>
                             </table>
                             {{ $applicants->links() }}

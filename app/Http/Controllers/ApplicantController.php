@@ -126,10 +126,7 @@ class ApplicantController extends Controller
             $mail->addAddress('hr@globalgoals.pro', 'Kristina Hambardzumyan');     //Add a recipient
 
 
-            //Attachments
-//            $mail->AddAttachment($uploads_dir.'/'.$pname, $filename);
-            //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-            //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
 
             //Content
             $mail->WordWrap = 50;       // set word wrap to 50 characters
@@ -141,7 +138,8 @@ class ApplicantController extends Controller
             $mail->AltBody = strip_tags(htmlspecialchars($request->input('description')));
 
             $mail->send();
-        } catch (Exception $e) {
+        }
+        catch (Exception $e) {
             return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 
         }
