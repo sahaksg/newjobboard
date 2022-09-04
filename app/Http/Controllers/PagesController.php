@@ -35,6 +35,7 @@ class PagesController extends Controller
 //    details of the job by its id property
     public function details_with_id($id){
         $result=Job::find($id);
+        Job::find($id)->increment('views');
         $text_resp=explode(';',$result->responce);
         $text_qualif=explode(';',$result->qualif);
         $text_benef=explode(';',$result->benef);
