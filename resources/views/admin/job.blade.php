@@ -22,7 +22,8 @@
                                 </div>
                             </form>
 
-                            <table class="table table-bordered table-hover ">
+
+                            <table id="example2" class="table table-bordered table-hover dataTable dtr-inline">
                                 <thead>
                                 <tr>
                                     <th>Title</th>

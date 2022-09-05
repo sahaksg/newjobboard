@@ -8,7 +8,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <table class="table table-bordered table-hover ">
+                            <table id="example2" class="table table-bordered table-hover dataTable dtr-inline">
                                 <thead>
                                 <tr>
                                     <th>Title</th>
@@ -23,7 +23,7 @@
                                     <tr>
                                         <td>{{$data->job_title}}</td>
                                         <td>{{$data->applications}}</td>
-                                        <td>{{$data->views}}</td>
+                                        <td>{{$data->views }}</td>
 
                                     </tr>
                                 @endforeach
@@ -34,7 +34,7 @@
 
                                 </tfoot>
                             </table>
-{{--                            {{ $jobs->links() }}--}}
+{{--                            {{ $datas->links() }}--}}
                         </div>
 
                     </div>

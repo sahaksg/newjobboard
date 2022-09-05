@@ -8,7 +8,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <table class="table table-bordered table-hover">
+                            <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
                                     <th>Position</th>

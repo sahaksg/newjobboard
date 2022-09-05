@@ -74,6 +74,6 @@
 <script src="{{asset('frontend/js/mail-script.js')}}" ></script>
 
 <script src="{{asset('frontend/js/main.js')}} "></script>
-frontend/js/jquery.validate.min.js
+<script src="{{asset('frontend/js/jquery.validate.min.js')}} "></script>
 </body>
 </html>

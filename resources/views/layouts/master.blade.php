@@ -42,6 +42,12 @@
     <!-- summernote -->
     <link rel="stylesheet" href="{{asset('frontend/css/summernote-bs4.min.css')}}">
 
+    <!-- DataTables -->
+    <link rel="stylesheet" href="{{asset('frontend/css/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+{{--    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/>--}}
+
 
 
 
@@ -103,12 +109,42 @@
 <script src="{{asset('frontend/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 <!-- Summernote -->
 <script src="{{asset('frontend/js/summernote-bs4.min.js')}}"></script>
+<!-- datatables -->
+
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="{{asset('frontend/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('frontend/js/adminlte.js')}}"></script>
-
+<!-- DataTables  & Plugins -->
+<script src="{{asset('frontend/css/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('frontend/css/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('frontend/css/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+<script src="{{asset('frontend/css/datatables-responsive/js/responsive.bootstrap4.min.js')}}"></script>
+<script src="{{asset('frontend/css/datatables-buttons/js/dataTables.buttons.min.js')}}"></script>
+<script src="{{asset('frontend/css/datatables-buttons/js/buttons.bootstrap4.min.js')}}"></script>
+<script src="{{asset('frontend/css/jszip/jszip.min.js')}}"></script>
+<script src="{{asset('frontend/css/pdfmake/pdfmake.min.js')}}"></script>
+<script src="{{asset('frontend/css/pdfmake/vfs_fonts.js')}}"></script>
+<script src="{{asset('frontend/css/datatables-buttons/js/buttons.html5.min.js')}}"></script>
+<script src="{{asset('frontend/css/datatables-buttons/js/buttons.print.min.js')}}"></script>
+<script src="{{asset('frontend/css/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 {{--<script src="{{asset('frontend/js/dashboard.js')}}"></script>--}}
+<script>
+    $(function () {
+
+        $('#example2').DataTable({
+
+            "paging": false,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+        });
+    });
+</script>
 </body>
 </html>
