@@ -20,12 +20,15 @@
     <link href="{{ asset('frontend/css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.min.css') }}">
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
 
     <!-- Ionicons -->
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+          integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet" href="{{asset('frontend/css/tempusdominus-bootstrap-4.min.css')}}">
@@ -46,41 +49,39 @@
     <link rel="stylesheet" href="{{asset('frontend/css/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
-{{--    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/>--}}
-
-
+    {{--    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/>--}}
 
 
 </head>
 <body>
 @if(!Auth::user())
 
-<script>
-    location.replace('{{ route('login') }}');
-</script>
+    <script>
+        location.replace('{{ route('login') }}');
+    </script>
 
 
 @else
-<div class="wrapper">
-    @include('layouts.inc.admin-navbar')
-    @include('layouts.inc.admin-sidebar')
-    <div class="content-wrapper">
+    <div class="wrapper">
+        @include('layouts.inc.admin-navbar')
+        @include('layouts.inc.admin-sidebar')
+        <div class="content-wrapper">
         @include('layouts.inc.admin-topmenu')
 
         <!-- Main content -->
-@yield('content')
+        @yield('content')
         <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+
+        @include('layouts.inc.admin-footer')
     </div>
-    <!-- /.content-wrapper -->
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-    </aside>
-    <!-- /.control-sidebar -->
-
-    @include('layouts.inc.admin-footer')
-</div>
 @endif
 
 
@@ -110,7 +111,6 @@
 <!-- Summernote -->
 <script src="{{asset('frontend/js/summernote-bs4.min.js')}}"></script>
 <!-- datatables -->
-
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="{{asset('frontend/js/jquery.overlayScrollbars.min.js')}}"></script>
@@ -133,9 +133,7 @@
 {{--<script src="{{asset('frontend/js/dashboard.js')}}"></script>--}}
 <script>
     $(function () {
-
         $('#example2').DataTable({
-
             "paging": false,
             "lengthChange": false,
             "searching": false,

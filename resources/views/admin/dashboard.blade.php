@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title','Jobboard Admin')
 @section('content')
-{{--    {{dd($datas)}}--}}
+    {{--    {{dd($datas)}}--}}
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -14,40 +14,26 @@
                                     <th>Title</th>
                                     <th>Applications</th>
                                     <th>Views</th>
-
                                 </tr>
                                 </thead>
                                 <tbody>
-
                                 @foreach($datas as $data)
                                     <tr>
                                         <td>{{$data->job_title}}</td>
                                         <td>{{$data->applications}}</td>
                                         <td>{{$data->views }}</td>
-
                                     </tr>
                                 @endforeach
-
-
                                 </tbody>
                                 <tfoot>
-
                                 </tfoot>
                             </table>
-{{--                            {{ $datas->links() }}--}}
+                            {{--                            {{ $datas->links() }}--}}
                         </div>
-
                     </div>
-
-
-
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 @endsection
 {{--{{dd($data)}}--}}

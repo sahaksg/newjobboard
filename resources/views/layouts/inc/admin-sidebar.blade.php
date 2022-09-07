@@ -10,10 +10,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{asset('frontend/img/avatars/kristina.jpg')}}" class="img-circle elevation-2" alt="User Image">
+{{--                <img src="{{asset('frontend/img/avatars/kristina.jpg')}}" class="img-circle elevation-2" alt="User Image">--}}
             </div>
             <div class="info">
-                <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                <h4 style="color: white">{{ Auth::user()->name }}</h4>
             </div>
         </div>
 

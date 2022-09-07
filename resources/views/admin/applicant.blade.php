@@ -1,7 +1,6 @@
 @extends('layouts.master')
 @section('title','Jobboard Admin')
 @section('content')
-
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -32,16 +31,13 @@
                                 @endforeach
                                 </tbody>
                                 <tfoot>
-
                                 </tfoot>
                             </table>
                             {{ $applicants->links() }}
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 @endsection
