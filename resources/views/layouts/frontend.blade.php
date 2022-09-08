@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/slicknav.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/contactform.css') }}">
 
     <style>
         a{

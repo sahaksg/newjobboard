@@ -71,3 +71,6 @@ Route::get('/admin', function () {
 });
 
 //Route::get('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']);
+
+Route::get('/contact', [App\Http\Controllers\ContactUsFormController::class, 'createForm']);
+Route::post('/contact', [App\Http\Controllers\ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
