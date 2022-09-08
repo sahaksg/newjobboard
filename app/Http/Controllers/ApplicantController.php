@@ -143,6 +143,8 @@ class ApplicantController extends Controller
             return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 
         }
+        // add functionality ro send confirmation mail about applied success to the applicants! Create new phpmailer structure
+
         return redirect()->back()->with('status', 'You have Applied Successfully!');
 
 
