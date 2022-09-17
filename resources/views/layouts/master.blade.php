@@ -50,7 +50,9 @@
     <link rel="stylesheet" href="{{asset('frontend/css/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
     {{--    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.css"/>--}}
-
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 
 </head>
 <body>
@@ -144,5 +146,6 @@
         });
     });
 </script>
+
 </body>
 </html>

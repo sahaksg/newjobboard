@@ -103,9 +103,43 @@ class ApplicantController extends Controller
                     return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 
                 }
+
+                $reply= new PHPMailer(true);
+                try {
+                    //Server settings
+                    //$mail->SMTPDebug = 1;                      //Enable verbose debug output
+                    $reply->isSMTP();                                            //Send using SMTP
+                    $reply->Host = 'mail.globalgoals.pro';                     //Set the SMTP server to send through
+                    $reply->SMTPAuth = true;                                   //Enable SMTP authentication
+                    $reply->Username = 'info@globalgoals.pro';                     //SMTP username
+                    $reply->Password = 'ZB{pE!!SZyTo';                               //SMTP password
+
+                    //Recipients
+                    $reply->setFrom('info@globalgoals.pro', 'Globalgoals');
+                    $reply->addAddress($applicant->email, $applicant->name);     //Add a recipient
+//dd($applicant->email, $applicant->name);
+
+
+
+                    //Content
+                    $reply->WordWrap = 50;       // set word wrap to 50 characters
+                    $reply->isHTML(true);                                  //Set email format to HTML
+                    $reply->Subject = "Confirmation from Globalgoals.pro " . htmlspecialchars($request->input('name')) . " for \"" . htmlspecialchars($request->input('job_title')) . "\"";
+                    $reply_body="Dear <b>".$applicant->name."</b><br> Your Application received was successfully.<br> We will contact you shortly!<br><br> Best Regards, <br> Globalgoals.pro<br>info@globalgoals.pro";
+
+                    $reply->Body = $reply_body;
+                    //$reply->AltBody = strip_tags(htmlspecialchars($request->input('description')));
+//            dd($reply_body);
+                    $reply->send();
+                }
+                catch (Exception $e) {
+                    return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+
+                }
                 return redirect()->back()->with('status', 'You have Applied Successfully!');
 
             }
+
 
         }
 //            return "No file";
@@ -144,7 +178,38 @@ class ApplicantController extends Controller
 
         }
         // add functionality ro send confirmation mail about applied success to the applicants! Create new phpmailer structure
+        $reply= new PHPMailer(true);
+        try {
+            //Server settings
+            //$mail->SMTPDebug = 1;                      //Enable verbose debug output
+            $reply->isSMTP();                                            //Send using SMTP
+            $reply->Host = 'mail.globalgoals.pro';                     //Set the SMTP server to send through
+            $reply->SMTPAuth = true;                                   //Enable SMTP authentication
+            $reply->Username = 'info@globalgoals.pro';                     //SMTP username
+            $reply->Password = 'ZB{pE!!SZyTo';                               //SMTP password
 
+            //Recipients
+            $reply->setFrom('info@globalgoals.pro', 'Globalgoals');
+            $reply->addAddress($applicant->email, $applicant->name);     //Add a recipient
+//dd($applicant->email, $applicant->name);
+
+
+
+            //Content
+            $reply->WordWrap = 50;       // set word wrap to 50 characters
+            $reply->isHTML(true);                                  //Set email format to HTML
+            $reply->Subject = "Confirmation from Globalgoals.pro " . htmlspecialchars($request->input('name')) . " for \"" . htmlspecialchars($request->input('job_title')) . "\"";
+            $reply_body="Dear <b>".$applicant->name."</b><br> Your Application was received successfully.<br> We will contact you shortly!<br><br> Best Regards, <br> Globalgoals.pro<br>info@globalgoals.pro";
+
+            $reply->Body = $reply_body;
+            //$reply->AltBody = strip_tags(htmlspecialchars($request->input('description')));
+//            dd($reply_body);
+            $reply->send();
+        }
+        catch (Exception $e) {
+            return "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+
+        }
         return redirect()->back()->with('status', 'You have Applied Successfully!');
 
 
